@@ -1,0 +1,87 @@
+<html>
+
+<head>
+    <title>GESTURE WEB APP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <center>
+
+            <br><br>
+            <div id="border">
+                <h3>GESTURE WEB APP
+
+                    <br>
+
+                    <span></span>
+                    <img height="50" width="50 " src="https://toppng.com/uploads/preview/peace-victory-hand-emoji-icon-ios10-11536087925yrjd0rfqte.png">
+                    <img height="50" width="50" src="data:image/jpeg;base64,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">
+                    <img height="50" width="50" src="https://c.files.bbci.co.uk/EF37/production/_108993216_ok-hand.jpg">
+
+                </h3>
+            </div>
+
+            <p style="font-size: 22px;">Take a selfie of a gesture to know about it's meaning, On the following gestures the model is trained
+                <br>
+                <b style="color: yellow"></b>
+                <br>
+                <b style="color: black"></b>
+                <br>
+                <b style="color: red"></b>
+                <br>
+            </p>
+            <div class="col -md-4 col-sm-12 col-xs-12"></div>
+            <label>Webcam View - </label>
+            <div id="camera"></div>
+            <br><br>
+            <button onclick="take_snapshot();" class="btn btn-warning">Capture Image</button>
+    </div>
+    <div class="col-md-4 col-sm-12 col-xs-12">
+        <label>Prediction 1 - </label>
+        <p class="emotion_name" id="result_emotion_name"></p>
+        <p class="emoji" id="update_emoji"></p>
+
+
+        <label>Prediction 2 - </label>
+        <p class="emotion_name" id="result_emotion_name"></p>
+        <p class="emoji" id="update_emoji2"></p>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="col-md-4 col-sm-12 col-xs-12">
+        <label>Snapshot - </label>
+        <div id="result"></div>
+        <br><br>
+        <button onclick="check();" class="btn btn-success">Predict </button>
+    </div>
+    <br><br>
+
+
+    </div>
+
+    </center>
+
+    </div>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
